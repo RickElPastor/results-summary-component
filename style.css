@@ -50,18 +50,23 @@ body {
     font-family: var(--font-family);
 }
 
+/* Parte arriba en mobile */
+
 .card-result {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
+    background-color: var(--white);
 }
 
 .card-result-left {
     background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
     width: 100%;
-    height: 50%;
+    height: 45%;
     border-radius: 0 0 30px 30px;
     padding: 15px 0 35px 0;
+    /* box-shadow: 5px 5px 10px 15px rgba(0, 0, 0, 0.2); */
 
     display: flex;
     flex-direction: column;
@@ -115,14 +120,179 @@ body {
     font-weight: var(--font-weight-regular);
 }
 
+/* Parte abajo en mobile */
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
+.card-result-right {
+    width: 100%;
+    height: 65%;
+    padding-top: 15px;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.card-result-right-summary {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-@media (min-width: 1440px) {}
+.card-result-right-summary h2 {
+    color: var(--dark-gray-blue);
+    font-size: var(--font-size-paragraph);
+}
+
+/* Items Universales */
+
+.card-result-right-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-result-right-item {
+    border-radius: 10px;
+    padding: 15px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-result-right-item-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-result-right-item-text p {
+    color: var(--dark-gray-blue);
+    font-weight: var(--font-weight-bold);
+}
+
+.card-result-right-item-text p span {
+    color: hsla(224, 30%, 27%, 0.384);
+    font-weight: var(--font-weight-regular);
+}
+
+/* Reaction */
+
+.reaction {
+    background-color: hsl(0, 83%, 95%);
+}
+
+.reaction-text {
+    color: var(--light-red);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Memory */
+
+.memory {
+    background-color: hsl(39, 100%, 95%);
+}
+
+.memory-text {
+    color: var(--orangey-yellow);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Verbal */
+
+.verbal {
+    background-color: hsl(166, 100%, 95%);
+}
+
+.verbal-text {
+    color: var(--green-teal);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Visual */
+
+.visual {
+    background-color: hsl(234, 85%, 95%);
+}
+
+.visual-text {
+    color: var(--cobalt-blue);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Button */
+
+.card-result-right-button {
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 1440px) {
+
+    body {
+        background-color: var(--pale-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card-result {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 40%;
+        border-radius: 30px;
+        margin: 0 auto;
+    }
+
+    .card-result-left {
+        width: 50%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .card-result-left h1 {
+        font-size: 25px;
+    }
+
+    .card-result-left-score {
+        width: 190px;
+        height: 190px;
+    }
+
+    .card-result-left-score h2 {
+        font-size: 70px;
+    }
+
+    .card-result-left-great {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-result-left-great h3 {
+        font-size: 35px;
+        font-weight: var(--font-weight-regular);
+    }
+
+    .card-result-right {
+        width: 50%;
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .card-result-right-cards {
+        margin-top: 10px;
+    }
+
+    .card-result-right-button {
+        margin-top: 25px;
+    }
+}
